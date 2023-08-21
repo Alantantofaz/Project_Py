@@ -1,6 +1,6 @@
 from Gui import *
 import Backend as core
-#teste 2
+#teste 10
 app = None
 
 def view_command():
