@@ -42,7 +42,7 @@ def getSelectedRow(event):
     app.entCPF.insert(END, selected[4])
     return selected
 if __name__ == "__main__":
-    App = Gui()
+    app = Gui()
     app.listClientes.bind('<<Listbox Select>>', getSelectedRow)
     app.btnViewAll.configure (command=view_command)
     app.btnBuscar.configure(command=search_command)
