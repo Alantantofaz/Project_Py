@@ -33,7 +33,7 @@ class TransactionObject():
             return True
         else:
             return False
-    
+    #Erro em initDB
     def initDB():
         trans = TransactionObject()
         trans.connect()
@@ -80,4 +80,4 @@ class TransactionObject():
         trans.persist()
         trans.disconnect()
     initDB()
-    #teste
+    
