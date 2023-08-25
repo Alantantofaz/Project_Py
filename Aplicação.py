@@ -41,13 +41,14 @@ def getSelectedRow(event):
     app.entCPP.delete(0, END)
     app.entCPF.insert(END, selected[4])
     return selected
-    if __name__ == "__main__":
-        app = Gui()
-        app.listClientes.bind('<<Listbox Select>>', getSelectedRow)
-        app.btnViewAll.configure (command=view_command)
-        app.btnBuscar.configure(command=search_command)
-        app.btnInserir.configure(command=insert_command)
-        app.btnUpdate.configure(command=update_command)
-        app.btnDel.configure(command=del_command)
-        app.btnClose.configure(command=app.window.destroy)
-        app.run()
+if __name__ == "__main__":
+    App = Gui()
+    app.listClientes.bind('<<Listbox Select>>', getSelectedRow)
+    app.btnViewAll.configure (command=view_command)
+    app.btnBuscar.configure(command=search_command)
+    app.btnInserir.configure(command=insert_command)
+    app.btnUpdate.configure(command=update_command)
+    app.btnDel.configure(command=del_command)
+    app.btnClose.configure(command=app.window.destroy)
+    app.run()
+    
