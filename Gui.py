@@ -7,7 +7,7 @@ class Gui():
     y_pad = 3
     width_entry = 30
 
-window = tk()
+window = Tk()
 window.wm_title("Pysql versão remaque")
 
 #Definindo variaveis para receber os dados
