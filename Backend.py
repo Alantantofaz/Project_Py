@@ -34,7 +34,7 @@ class TransactionObject():
         else:
             return False
     #Erro em initDB
-    def initDB():
+def initDB():
         trans = TransactionObject()
         trans.connect()
     
@@ -42,14 +42,14 @@ class TransactionObject():
         trans.persist()
         trans.disconnect()
 
-    def insert(nome,sobrenome,email,cpf):
+def insert(nome,sobrenome,email,cpf):
         trans = TransactionObject()
         trans.connect()
         trans.execute("INSERT INTO clintes VALUES(NULL,?,?,?,?)",(nome,sobrenome,email,cpf))
         trans.persist()
         trans.disconnect()
     
-    def view():
+def view():
         trans = TransactionObject()
         trans.connect()
         trans.execute("SELECT * FROM clientes")
@@ -57,7 +57,7 @@ class TransactionObject():
         trans.disconnect
         return rows 
     
-    def search(nome="",sobrenome="",email="",cpf=""):
+def search(nome="",sobrenome="",email="",cpf=""):
         trans = TransactionObject()
         trans.connect()
 
@@ -66,18 +66,18 @@ class TransactionObject():
         trans.disconnect()
         return rows
     
-    def delete(id):
+def delete(id):
         trans = TransactionObject()
         trans.connect()
         trans.execute("DELETE FROM clientes WHERE id = ?",(id))
         trans.persist()
         trans.disconnect()
 
-    def update(id,nome,sobrenome,email,cpf):
+def update(id,nome,sobrenome,email,cpf):
         trans = TransactionObject()
         trans.connect()
         trans.execute("UPDATE clientes SET nome =?,sobrenome=?,email=?,cpf=? WHERE id=?",(nome,sobrenome,email,cpf,id))
         trans.persist()
         trans.disconnect()
-    initDB()
+initDB()
     
