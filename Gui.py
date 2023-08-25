@@ -3,9 +3,9 @@ from tkinter import *
 class Gui():
     """"Classe da interface Gráfica
     """
-    x_pad = 5
-    y_pad = 3
-    width_entry = 30
+x_pad = 5
+y_pad = 3
+width_entry = 30
 
 window = Tk()
 window.wm_title("Pysql versão remaque")
