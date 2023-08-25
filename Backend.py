@@ -80,4 +80,4 @@ class TransactionObject():
         trans.persist()
         trans.disconnect()
     initDB()
-    #teste
+    
