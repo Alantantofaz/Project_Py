@@ -1,3 +1,4 @@
+from tkinter import Tk, Label, Entry, Listbox, Scrollbar, Button, StringVar
 class Gui(Tk):
     def __init__(self):
         super().__init__()
